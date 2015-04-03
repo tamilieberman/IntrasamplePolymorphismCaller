@@ -1,8 +1,7 @@
 Intrasample Polymorphism Caller
 ================
-Start with samtools pileup format.
-------------------------------------------------------------
 
+Start with samtools pileup format.
 Some MATLAB functions to aid in finding polymorphic nucleotide positions from single-chromosome small genomes, not optimized for speed. <br> <br>
 *pileup_to_diversity_matrix.m* summarizes pileup formats in a convenient 39 x genomelength matrix for easy interrogation in MATLAB (pileup_to_diversity_matrix.m) <br>
 *find_diverse_positions_single_sample.m* deploys the filters in Lieberman et al, 2014 to call polymorphic positions.
