@@ -22,7 +22,6 @@ Steps to analyzing intrasample diversity: <br>
 3) Find polymorphic positions in your sample using *find_diverse_positions_single_sample.m* <br>
 4) Adjust filters by comparing across samples.
 
-Example code:
 
 
 (1) Summarize SAMtools pileup files in a convenient matlab structure using *pileup_to_diversity_matrix.m*: <br>
