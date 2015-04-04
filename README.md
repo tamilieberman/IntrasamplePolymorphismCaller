@@ -8,10 +8,8 @@ Some MATLAB functions to aid in finding polymorphic nucleotide positions from si
 
 It is strongly recommended that you use the interactive enviornment faciliated by MATALB to compare these 39 attributes across your samples at each position. <br>
 
-Uploaded by Tami Lieberman, 2015. Created by Tami Lieberman and Roy Kishony. <br>
-
 If you find these scripts helpful, please cite: <br>
-Lieberman, T. D., Flett, K. B., Yelin, I., Martin, T. R., McAdam, A. J., Priebe, G. P., & Kishony, R. (2014). Genetic variation of a bacterial pathogen within individuals with cystic fibrosis provides a record of selective pressures. Nature Genetics, 46(1), 82-87.
+Lieberman, T. D., Flett, K. B., Yelin, I., Martin, T. R., McAdam, A. J., Priebe, G. P., & Kishony, R. (2014). Genetic variation of a bacterial pathogen within individuals with cystic fibrosis provides a record of selective pressures. Nature Genetics.
 
 
 
@@ -33,7 +31,7 @@ pileup_to_diversity_matrix(INFILE, OUTFILE, GENOMELENGTH)<br>
 Example:<br>
 pileup_to_diversity_matrix('sample.pileup', 'sample.mat', 4411532) <br>
 
-(2) Find major allee frequencies in negative control sample using *maf_from_matrix.m*: (optional)<br>
+(2) Find major allele frequencies in negative control sample using *maf_from_matrix.m*: (optional)<br>
 ------------------------------------------------------------
 See header of this file for use on this command. <br>
 One of the most useful filters is masking polymorphic positions found in a negative (isogenic) control sample. This sample quickly calculates the major allele frequency at each genomic position in your negative control using the output from pileup_to_diversity.mat<br>
@@ -47,17 +45,17 @@ Example:<br>
 ------------------------------------------------------------
 See header of this file for use on this command and description of the various filters.<br>
 Returns a numeric list of positions on the genome with polymorphisms. <br>
-And example PARAMETERSFILE is included in this repository. 
+And example PARAMETERSFILE is included in this repository. Thresholds are all strictly greater than or less than, and should be self explanatory when combined with header of *pileup_to_diversity_matrix.m*.<br>
 
 Usage:<br>
-*positions=find_diverse_positions_single_sample(INFILE,PARAMETERSFILE,CONTROLFREQS)*<br>
+*positions=find_diverse_positions_single_sample(INFILE,PARAMETERSFILE,OUTPUTSUMMARYFILE,CONTROLFREQS)*<br>
 or (if no isogenic control) <br>
-*positions=find_diverse_positions_single_sample(INFILE,PARAMETERSFILE)*<br>
+*positions=find_diverse_positions_single_sample(INFILE,PARAMETERSFILE,OUTPUTSUMMARYFILE)*<br>
 Example:<br>
-*positions=find_diverse_positions_single_sample('sample.mat','paramters.mat',control_freqs)*<br>
+*positions=find_diverse_positions_single_sample('sample.mat','example_params.mat','summary.txt',control_freqs)*<br>
 
 
 (4) Adjust filters by comparing across samples. <br>
 ------------------------------------------------------------
 Please write your own scripts in MATLAB, investigate the data carefully, and make sure that filters are set appropriately for your genome, samples, and application.
-We recommend grabbing all 39 attributes from the .mat files at each candidate variant position in your samples, to make a 3 dimensional matrix of dimension (39 X numpositions X numsamples).
+It is recommended to grab all 39 attributes from the .mat files at each candidate variant position in your samples, to make a 3 dimensional matrix of dimension (39 X numpositions X numsamples).
