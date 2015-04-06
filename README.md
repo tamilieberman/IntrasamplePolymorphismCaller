@@ -33,8 +33,7 @@ pileup_to_diversity_matrix('sample.pileup', 'sample.mat', 4411532) <br>
 
 (2) Find major allele frequencies in negative control sample using *maf_from_matrix.m*: (optional)<br>
 ------------------------------------------------------------
-See header of this file for use on this command. <br>
-One of the most useful filters is masking polymorphic positions found in a negative (isogenic) control sample. This sample quickly calculates the major allele frequency at each genomic position in your negative control using the output from pileup_to_diversity.mat<br>
+One of the most useful filters is masking polymorphic positions found in a negative (isogenic) control sample. This function quickly calculates the major allele frequency at each genomic position in your negative control (or any sample) using the output from pileup_to_diversity.mat<br>
 Usage:<br>
 *control_freqs=maf_from_matrix(INFILE,OUTFILE)*<br>
 Example:<br>
@@ -43,7 +42,6 @@ Example:<br>
 
 (3) Find polymorphic positions in your sample using *find_diverse_positions_single_sample.m*:  <br>
 ------------------------------------------------------------
-See header of this file for use on this command and description of the various filters.<br>
 Returns a numeric list of positions on the genome with polymorphisms. <br>
 And example PARAMETERSFILE is included in this repository. Thresholds are all strictly greater than or less than, and should be self explanatory when combined with header of *pileup_to_diversity_matrix.m*.<br>
 
