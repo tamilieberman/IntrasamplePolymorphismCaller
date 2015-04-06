@@ -6,7 +6,7 @@ Some MATLAB functions to aid in finding polymorphic nucleotide positions from si
 *pileup_to_diversity_matrix.m* summarizes pileup formats in a convenient 39 x genomelength matrix for easy interrogation in MATLAB (pileup_to_diversity_matrix.m) <br>
 *find_diverse_positions_single_sample.m* deploys the filters in Lieberman et al, 2014 to call polymorphic positions.
 
-It is strongly recommended that you use the interactive enviornment faciliated by MATALB to compare these 39 attributes across your samples at each position. <br>
+It is strongly recommended that you use the interactive enviornment faciliated by MATLAB to compare these 39 attributes across your samples at each position. <br>
 
 If you find these scripts helpful, please cite: <br>
 Lieberman, T. D., Flett, K. B., Yelin, I., Martin, T. R., McAdam, A. J., Priebe, G. P., & Kishony, R. (2014). Genetic variation of a bacterial pathogen within individuals with cystic fibrosis provides a record of selective pressures. Nature Genetics.
@@ -57,5 +57,5 @@ Example:<br>
 
 (4) Adjust filters by comparing across samples. <br>
 ------------------------------------------------------------
-Please write your own scripts in MATLAB, investigate the data carefully, and make sure that filters are set appropriately for your genome, samples, and application.
-It is recommended to grab all 39 attributes from the .mat files at each candidate variant position in your samples, to make a 3 dimensional matrix of dimension (39 X numpositions X numsamples).
+Please write your own scripts in MATLAB, investigate the data carefully, and make sure that filters are set appropriately for your genome, samples, and application.<br>
+It is recommended to grab all 39 attributes from the .mat files at each candidate variant position in your samples, to make a 3 dimensional matrix of dimension (39 X numpositions X numsamples). Filters can be set loosely at first, and then made more strict upon invesitgation of the data across samples.
