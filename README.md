@@ -6,7 +6,7 @@ Some MATLAB functions to aid in finding polymorphic nucleotide positions from si
 *pileup_to_diversity_matrix.m* summarizes pileup formats in a convenient 39 x genomelength matrix for easy interrogation in MATLAB (pileup_to_diversity_matrix.m) <br>
 *find_diverse_positions_single_sample.m* deploys the filters in Lieberman et al, 2014 to call polymorphic positions.
 
-It is strongly recommended that you use the interactive enviornment faciliated by MATLAB to compare these 39 attributes across your samples at each position. <br>
+It is strongly recommended that you use the interactive enviornment facilitated by MATLAB to compare these 39 attributes across your samples at each position. <br>
 
 If you find these scripts helpful, please cite: <br>
 Lieberman, T. D., Flett, K. B., Yelin, I., Martin, T. R., McAdam, A. J., Priebe, G. P., & Kishony, R. (2014). Genetic variation of a bacterial pathogen within individuals with cystic fibrosis provides a record of selective pressures. Nature Genetics.
